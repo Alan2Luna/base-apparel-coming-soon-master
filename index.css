@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+:root {
+    /*      PRIMARY         */
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+
+    /*      NEUTRAL         */
+    --dark-grayish-red: hsl(0, 6%, 24%);
+
+    /*      GRADIENTS       */
+    /* - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+    - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%) ) */
+}
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+}
+
+/*      HEADER      */
+.header {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.header__logo {
+    width: 120px;
+    vertical-align: middle;
+}
+
+.hero__img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.text {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3.5rem 0;
+}
+
+.text__title {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--dark-grayish-red);
+    font-weight: 400;
+    letter-spacing: 7px;
+}
+
+.text__title span {
+    color: var(--desaturated-red);
+    font-weight: 300;
+}
+
+.text__content {
+    font-size: .9rem;
+    color: var(--desaturated-red);
+    line-height: 20px;
+    margin-top: 1.2rem;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--desaturated-red);
+    padding-left: 1.2rem;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.input {
+    border: none;
+    outline: none;
+}
+
+.input::placeholder {
+    color: var(--desaturated-red);
+}
+
+.btn-submit {
+    height: 45px;
+    width: 65px;
+    border: none;
+    border-radius: 30px;
+    background-image: url('images/icon-arrow.svg');
+    background-color: var(--desaturated-red);
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: none;
+}
+
+@media screen and (min-width: 600px) {
+    .header {
+        width: 50%;
+        margin: auto;
+    }
+    .hero {
+        width: 50%;
+        margin: auto;
+    }
+    .text {
+        width: 50%;
+        margin: auto;
+    }
+}
+
+@media screen and  (min-width: 900px) {
+    body {
+        display: grid;
+        grid-template-columns: 65% 35%;
+    }
+    .hero_img {
+        background-image: url('./images/hero-desktop.jpg');
+    }
+}
